@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="id" data-bs-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galeri & Suasana – Kopi Senja</title>
+<meta name="description" content="Suasana ruang duduk, sudut seduh manual, fasilitas kerja, dan kegiatan komunitas di Kopi Senja.">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,700;1,500&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="prog"></div>
+<nav id="top" class="navbar navbar-expand-lg fixed-top site-nav">
+  <div class="container">
+    <a class="navbar-brand brand" href="index.html">Kopi Senja</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Buka menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+        <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang Kami</a></li>
+        <li class="nav-item"><a class="nav-link" href="menu.html">Menu &amp; Harga</a></li>
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="galeri.html">Galeri</a></li>
+        <li class="nav-item"><a class="nav-link" href="pesan.html">Pesan &amp; Kontak</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Kategori</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="menu.html?cat=Espresso">Espresso Bar</a></li>
+            <li><a class="dropdown-item" href="menu.html?cat=Manual">Manual Brew</a></li>
+            <li><a class="dropdown-item" href="menu.html?cat=Non-Kopi">Non-Kopi</a></li>
+            <li><a class="dropdown-item" href="menu.html?cat=Camilan">Camilan</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="menu.html">Semua menu</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="d-flex me-lg-3 my-2 my-lg-0" role="search" id="searchForm">
+        <input class="form-control me-2" id="searchInput" type="search" placeholder="Cari menu" aria-label="Cari menu">
+        <button class="btn btn-outline-gold" type="submit">Cari</button>
+      </form>
+      <button class="btn btn-theme" id="themeBtn" type="button" aria-label="Ganti mode terang atau gelap">◐</button>
+    </div>
+  </div>
+</nav>
+
+<header class="page-hero s3">
+  <div class="blobs" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="container slide-text">
+    <p class="eyebrow">Galeri &amp; Suasana</p>
+    <h1>Tempat untuk<br><em>lama duduk.</em></h1>
+    <p class="lead-s mb-0">Pencahayaan hangat, aroma sangrai segar, Wi-Fi stabil, dan colokan di hampir setiap meja.</p>
+  </div>
+</header>
+
+<section class="container py-5">
+  <div class="mb-4 rv">
+    <p class="eyebrow mb-1">Sudut &amp; Momen</p>
+    <h2 class="section-title">Potret Keseharian Kedai</h2>
+  </div>
+  <div class="row g-4">
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card h-100 tilt rv">
+        <div class="card-img-top ph ph1" role="img" aria-label="Meja bar espresso"><span>☕</span></div>
+        <div class="card-body">
+          <p class="eyebrow mb-1">Bar Utama</p>
+          <h5 class="card-title">Meja Espresso &amp; Obrolan</h5>
+          <p class="card-text">Duduk tepat di depan bar untuk melihat langsung proses ekstraksi espresso dan berbincang dengan barista.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card h-100 tilt rv">
+        <div class="card-img-top ph ph2" role="img" aria-label="Sudut kerja tenang"><span>💻</span></div>
+        <div class="card-body">
+          <p class="eyebrow mb-1">Area Produktif</p>
+          <h5 class="card-title">Sudut Kerja &amp; Baca</h5>
+          <p class="card-text">Meja kayu luas dengan kursi ergonomis, colokan listrik mudah dijangkau, serta koneksi Wi-Fi kencang.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card h-100 tilt rv">
+        <div class="card-img-top ph ph3" role="img" aria-label="Teras sore"><span>🌇</span></div>
+        <div class="card-body">
+          <p class="eyebrow mb-1">Ruang Terbuka</p>
+          <h5 class="card-title">Teras Senja</h5>
+          <p class="card-text">Area semi-terbuka yang paling ramai menjelang pukul lima sore untuk menikmati angin dan kopi susu aren.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card h-100 tilt rv">
+        <div class="card-img-top ph ph2" role="img" aria-label="Meja seduh V60"><span>🫖</span></div>
+        <div class="card-body">
+          <p class="eyebrow mb-1">Manual Brew</p>
+          <h5 class="card-title">Pojok Seduh Tangan</h5>
+          <p class="card-text">Deretan dripper V60, timbangan presisi, dan teko leher angsa untuk menonjolkan karakter single origin pilihan.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card h-100 tilt rv">
+        <div class="card-img-top ph ph1" role="img" aria-label="Rak biji sangrai"><span>🫘</span></div>
+        <div class="card-body">
+          <p class="eyebrow mb-1">Roastery Kecil</p>
+          <h5 class="card-title">Rak Biji Sangrai Mingguan</h5>
+          <p class="card-text">Tersedia kemasan biji kopi sangrai 200 gram untuk Anda seduh sendiri di rumah.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card h-100 tilt rv">
+        <div class="card-img-top ph ph3" role="img" aria-label="Akustik akhir pekan"><span>🎶</span></div>
+        <div class="card-body">
+          <p class="eyebrow mb-1">Komunitas</p>
+          <h5 class="card-title">Sesi Akustik &amp; Cupping</h5>
+          <p class="card-text">Setiap akhir pekan kami mengadakan sesi mencicipi biji baru bersama pelanggan dan musisi lokal.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container pb-5">
+  <div class="mb-4 rv">
+    <p class="eyebrow mb-1">Agenda rutin</p>
+    <h2 class="section-title">Jadwal Kegiatan Kedai</h2>
+  </div>
+  <div class="price-card rv">
+    <div class="table-responsive">
+      <table class="table table-hover align-middle mb-0">
+        <thead>
+          <tr>
+            <th scope="col">Kegiatan</th>
+            <th scope="col">Hari &amp; Jam</th>
+            <th scope="col">Keterangan</th>
+            <th scope="col">Ikut Serta</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Public Coffee Cupping</th><td>Rabu, 16.30 WITA</td><td>Mencicipi 4 profil sangrai biji lokal terbaru</td><td><a href="pesan.html" class="btn btn-gold btn-sm">Daftar</a></td></tr>
+          <tr><th scope="row">Kelas Seduh V60 Pemula</th><td>Sabtu, 14.00 WITA</td><td>Belajar rasio, suhu air, dan teknik tuang bersama barista</td><td><a href="pesan.html" class="btn btn-gold btn-sm">Daftar</a></td></tr>
+          <tr><th scope="row">Senja Akustik</th><td>Minggu, 19.30 WITA</td><td>Musik akustik santai menemani malam minggu</td><td><a href="pesan.html" class="btn btn-outline-gold btn-sm">Reservasi meja</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- Modal pesan -->
+<div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content booking-modal">
+      <form id="bookingForm">
+        <div class="modal-header">
+          <div>
+            <p class="eyebrow mb-1">Pesan di Kopi Senja</p>
+            <h2 class="modal-title fs-5" id="bookingModalTitle">Pesan menu</h2>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="bookingDestination" class="form-label">Menu</label>
+            <input class="form-control" id="bookingDestination" name="destination" type="text" readonly required>
+          </div>
+          <div class="mb-3">
+            <label for="bookingName" class="form-label">Nama</label>
+            <input class="form-control" id="bookingName" name="name" type="text" autocomplete="name" maxlength="80" required>
+          </div>
+          <div class="row g-3">
+            <div class="col-sm-7">
+              <label for="bookingDate" class="form-label">Tanggal ambil</label>
+              <input class="form-control" id="bookingDate" name="date" type="date" required>
+            </div>
+            <div class="col-sm-5">
+              <label for="bookingGuests" class="form-label">Jumlah</label>
+              <input class="form-control" id="bookingGuests" name="guests" type="number" min="1" max="30" value="1" required>
+            </div>
+          </div>
+          <div id="bookingMessage" class="booking-message mt-3" role="status" aria-live="polite"></div>
+          <p class="small text-secondary mt-3 mb-0">Formulir ini menyiapkan ringkasan pesanan dan tautan konfirmasi WhatsApp ke kedai.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Batal</button>
+          <button type="submit" class="btn btn-gold">Siapkan ringkasan</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="row gy-4 align-items-start">
+      <div class="col-12 col-md-5">
+        <a class="footer-brand" href="index.html">Kopi Senja</a>
+        <p class="footer-description mb-0 mt-2">Kedai kopi lokal dengan seduhan sabar. Buka setiap hari, 10.00–22.00 WITA.</p>
+      </div>
+      <div class="col-6 col-md-4">
+        <h2 class="footer-heading">Navigasi Halaman</h2>
+        <nav aria-label="Navigasi footer">
+          <ul class="footer-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="tentang.html">Tentang Kami</a></li>
+            <li><a href="menu.html">Menu &amp; Harga</a></li>
+            <li><a href="galeri.html">Galeri &amp; Suasana</a></li>
+            <li><a href="pesan.html">Pesan &amp; Kontak</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="col-6 col-md-3">
+        <h2 class="footer-heading">Kategori Menu</h2>
+        <ul class="footer-links">
+          <li><a href="menu.html?cat=Espresso">Espresso Bar</a></li>
+          <li><a href="menu.html?cat=Manual">Manual Brew</a></li>
+          <li><a href="menu.html?cat=Non-Kopi">Non-Kopi</a></li>
+          <li><a href="menu.html?cat=Camilan">Camilan</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom d-flex flex-wrap justify-content-between gap-2">
+      <p class="mb-0">&copy; 2026 Kopi Senja. Harga pada halaman ini dapat berubah sewaktu-waktu.</p>
+      <p class="mb-0">Jl. Senja No. 14 &bull; 10.00–22.00 WITA</p>
+    </div>
+  </div>
+</footer>
+<button id="toTop" class="btn btn-gold" aria-label="Kembali ke atas">↑</button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+</html>

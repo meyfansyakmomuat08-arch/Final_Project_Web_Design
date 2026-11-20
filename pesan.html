@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="id" data-bs-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pesan & Kontak – Kopi Senja</title>
+<meta name="description" content="Pesan menu untuk ambil di tempat, reservasi meja, dan hubungi kedai Kopi Senja.">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,700;1,500&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="prog"></div>
+<nav id="top" class="navbar navbar-expand-lg fixed-top site-nav">
+  <div class="container">
+    <a class="navbar-brand brand" href="index.html">Kopi Senja</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Buka menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+        <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang Kami</a></li>
+        <li class="nav-item"><a class="nav-link" href="menu.html">Menu &amp; Harga</a></li>
+        <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="pesan.html">Pesan &amp; Kontak</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Kategori</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="menu.html?cat=Espresso">Espresso Bar</a></li>
+            <li><a class="dropdown-item" href="menu.html?cat=Manual">Manual Brew</a></li>
+            <li><a class="dropdown-item" href="menu.html?cat=Non-Kopi">Non-Kopi</a></li>
+            <li><a class="dropdown-item" href="menu.html?cat=Camilan">Camilan</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="menu.html">Semua menu</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="d-flex me-lg-3 my-2 my-lg-0" role="search" id="searchForm">
+        <input class="form-control me-2" id="searchInput" type="search" placeholder="Cari menu" aria-label="Cari menu">
+        <button class="btn btn-outline-gold" type="submit">Cari</button>
+      </form>
+      <button class="btn btn-theme" id="themeBtn" type="button" aria-label="Ganti mode terang atau gelap">◐</button>
+    </div>
+  </div>
+</nav>
+
+<header class="page-hero s1">
+  <div class="blobs" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="container slide-text">
+    <p class="eyebrow">Pesan &amp; Kontak</p>
+    <h1>Siapkan pesanan,<br><em>tinggal ambil.</em></h1>
+    <p class="lead-s mb-0">Isi formulir di bawah untuk menyiapkan ringkasan pesanan atau reservasi meja, lalu kirim langsung via WhatsApp.</p>
+  </div>
+</header>
+
+<section class="container py-5">
+  <div class="row g-4">
+    <div class="col-12 col-lg-7 rv">
+      <div class="card p-4 p-md-5">
+        <p class="eyebrow mb-1">Formulir pemesanan</p>
+        <h2 class="h2 mb-4">Pesan Menu / Reservasi</h2>
+        <form id="pageOrderForm">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label for="orderName" class="form-label">Nama Pemesan</label>
+              <input type="text" class="form-control" id="orderName" placeholder="Contoh: Raka" maxlength="80" required>
+            </div>
+            <div class="col-md-6">
+              <label for="orderType" class="form-label">Jenis Layanan</label>
+              <select class="form-select" id="orderType" required>
+                <option value="Ambil di Kedai (Takeaway)">Ambil di Kedai (Takeaway)</option>
+                <option value="Minum di Tempat (Dine-in)">Minum di Tempat (Dine-in)</option>
+                <option value="Reservasi Meja / Komunitas">Reservasi Meja / Komunitas</option>
+              </select>
+            </div>
+            <div class="col-md-8">
+              <label for="orderMenu" class="form-label">Pilih Menu Utama</label>
+              <select class="form-select" id="orderMenu" required>
+                <option value="Kopi Susu Aren Senja (Rp20.000)">Kopi Susu Aren Senja – Rp20.000</option>
+                <option value="Espresso (Rp18.000)">Espresso – Rp18.000</option>
+                <option value="Americano (Rp20.000)">Americano – Rp20.000</option>
+                <option value="Cappuccino (Rp24.000)">Cappuccino – Rp24.000</option>
+                <option value="V60 Single Origin (Rp28.000)">V60 Single Origin – Rp28.000</option>
+                <option value="French Press (Rp26.000)">French Press – Rp26.000</option>
+                <option value="Cold Brew Senja (Rp25.000)">Cold Brew Senja – Rp25.000</option>
+                <option value="Cokelat Klasik Senja (Rp23.000)">Cokelat Klasik Senja – Rp23.000</option>
+                <option value="Roti Bakar Cokelat (Rp16.000)">Roti Bakar Cokelat – Rp16.000</option>
+                <option value="Paket Teman Duduk (Rp32.000)">Paket Teman Duduk – Rp32.000</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+              <label for="orderQty" class="form-label">Jumlah</label>
+              <input type="number" class="form-control" id="orderQty" min="1" max="30" value="1" required>
+            </div>
+            <div class="col-md-6">
+              <label for="orderDate" class="form-label">Tanggal</label>
+              <input type="date" class="form-control" id="orderDate" required>
+            </div>
+            <div class="col-md-6">
+              <label for="orderTime" class="form-label">Perkiraan Jam</label>
+              <input type="time" class="form-control" id="orderTime" value="16:30" required>
+            </div>
+            <div class="col-12">
+              <label for="orderNote" class="form-label">Catatan Tambahan (opsional)</label>
+              <textarea class="form-control" id="orderNote" rows="2" placeholder="Contoh: Kurangi gula, pakai susu oat, atau meja dekat colokan"></textarea>
+            </div>
+          </div>
+          <div class="mt-4 d-flex flex-wrap gap-2">
+            <button type="submit" class="btn btn-gold btn-lg">Siapkan Ringkasan &amp; WhatsApp</button>
+          </div>
+          <div id="pageOrderResult" class="booking-message mt-3" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-5 rv">
+      <div class="card p-4 mb-4">
+        <p class="eyebrow mb-1">Informasi kedai</p>
+        <h3 class="h3 mb-3">Lokasi &amp; Jam Buka</h3>
+        <ul class="list-unstyled mb-0">
+          <li class="mb-2"><strong>Alamat:</strong> Jl. Senja No. 14, Pusat Kota</li>
+          <li class="mb-2"><strong>Jam Operasional:</strong> Setiap hari, 10.00–22.00 WITA</li>
+          <li class="mb-2"><strong>WhatsApp Kasir:</strong> +62 812-3456-7890</li>
+          <li class="mb-0"><strong>Fasilitas:</strong> Wi-Fi, Stopkontak tiap meja, Area Teras, Mushola</li>
+        </ul>
+      </div>
+
+      <div class="card p-4">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+          <div>
+            <p class="eyebrow mb-0">Browser Anda</p>
+            <h3 class="h4 mb-0">Riwayat Ringkasan</h3>
+          </div>
+          <button type="button" class="btn btn-outline-gold btn-sm" id="clearHistoryBtn">Hapus</button>
+        </div>
+        <p class="small text-secondary mb-3">Pesanan yang Anda siapkan di situs ini tersimpan sementara di browser Anda.</p>
+        <ul class="list-group list-group-flush" id="orderHistoryList">
+          <li class="list-group-item bg-transparent text-secondary px-0">Belum ada ringkasan pesanan.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Modal pesan -->
+<div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content booking-modal">
+      <form id="bookingForm">
+        <div class="modal-header">
+          <div>
+            <p class="eyebrow mb-1">Pesan di Kopi Senja</p>
+            <h2 class="modal-title fs-5" id="bookingModalTitle">Pesan menu</h2>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="bookingDestination" class="form-label">Menu</label>
+            <input class="form-control" id="bookingDestination" name="destination" type="text" readonly required>
+          </div>
+          <div class="mb-3">
+            <label for="bookingName" class="form-label">Nama</label>
+            <input class="form-control" id="bookingName" name="name" type="text" autocomplete="name" maxlength="80" required>
+          </div>
+          <div class="row g-3">
+            <div class="col-sm-7">
+              <label for="bookingDate" class="form-label">Tanggal ambil</label>
+              <input class="form-control" id="bookingDate" name="date" type="date" required>
+            </div>
+            <div class="col-sm-5">
+              <label for="bookingGuests" class="form-label">Jumlah</label>
+              <input class="form-control" id="bookingGuests" name="guests" type="number" min="1" max="30" value="1" required>
+            </div>
+          </div>
+          <div id="bookingMessage" class="booking-message mt-3" role="status" aria-live="polite"></div>
+          <p class="small text-secondary mt-3 mb-0">Formulir ini menyiapkan ringkasan pesanan dan tautan konfirmasi WhatsApp ke kedai.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Batal</button>
+          <button type="submit" class="btn btn-gold">Siapkan ringkasan</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="row gy-4 align-items-start">
+      <div class="col-12 col-md-5">
+        <a class="footer-brand" href="index.html">Kopi Senja</a>
+        <p class="footer-description mb-0 mt-2">Kedai kopi lokal dengan seduhan sabar. Buka setiap hari, 10.00–22.00 WITA.</p>
+      </div>
+      <div class="col-6 col-md-4">
+        <h2 class="footer-heading">Navigasi Halaman</h2>
+        <nav aria-label="Navigasi footer">
+          <ul class="footer-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="tentang.html">Tentang Kami</a></li>
+            <li><a href="menu.html">Menu &amp; Harga</a></li>
+            <li><a href="galeri.html">Galeri &amp; Suasana</a></li>
+            <li><a href="pesan.html">Pesan &amp; Kontak</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="col-6 col-md-3">
+        <h2 class="footer-heading">Kategori Menu</h2>
+        <ul class="footer-links">
+          <li><a href="menu.html?cat=Espresso">Espresso Bar</a></li>
+          <li><a href="menu.html?cat=Manual">Manual Brew</a></li>
+          <li><a href="menu.html?cat=Non-Kopi">Non-Kopi</a></li>
+          <li><a href="menu.html?cat=Camilan">Camilan</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom d-flex flex-wrap justify-content-between gap-2">
+      <p class="mb-0">&copy; 2026 Kopi Senja. Harga pada halaman ini dapat berubah sewaktu-waktu.</p>
+      <p class="mb-0">Jl. Senja No. 14 &bull; 10.00–22.00 WITA</p>
+    </div>
+  </div>
+</footer>
+<button id="toTop" class="btn btn-gold" aria-label="Kembali ke atas">↑</button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+</html>
